@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
+use App\Jobs;
+use App\Employees;
 
 class DatabaseSeeder extends Seeder
 {

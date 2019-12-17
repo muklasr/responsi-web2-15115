@@ -40,7 +40,7 @@ class JobsController extends Controller
             'nama'=>'required',
         ]);
         $jobs = new Jobs([
-            'nama' => $request->input('nama')
+            'name' => $request->input('nama')
         ]);
         $jobs->save();
         return redirect('jobs');
@@ -66,7 +66,7 @@ class JobsController extends Controller
     public function edit($id)
     {
         $da = Jobs::where('id_jobs', '=', $id)->firstOrFail();
-        return view('')->with('', $ta);
+        return view('jobs.edit')->with('jobs', $da);
     }
 
     /**
@@ -76,15 +76,15 @@ class JobsController extends Controller
      * @param  \App\Jobs  $jobs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $request->validate([
             'nama'=>'required',
         ]);
         $data = [
-            'nama' => $request->nama,
+            'name' => $request->nama,
         ];
-        Jobs::where('id_jobs',$id)->update($data);
+        Jobs::where('id_jobs',$request->id)->update($data);
         return redirect('jobs');
     }
 
@@ -97,6 +97,6 @@ class JobsController extends Controller
     public function destroy($id)
     {
         Jobs::where('id_jobs',$id)->delete();
-        return redirect('job');
+        return redirect('jobs');
     }
 }

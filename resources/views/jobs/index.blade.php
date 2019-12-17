@@ -20,11 +20,6 @@
                 <div class="btn-group">
                     <a href="/jobs/edit/{{$data->id_jobs}}" class="btn btn-success">Edit</a>
                     <a href="/jobs/delete/{{$data->id_jobs}}" class="btn btn-danger">Hapus</a>
-<!--                     <form action="{{ route('', $data->id_jobs)}}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger" type="submit">Hapus</button>
-                    </form> -->
                 </div>
             </td>
         </tr>

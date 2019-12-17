@@ -19,7 +19,7 @@
         @foreach($employees as $data)
         <tr>
             <th scope="row">{{$data->id_employees}}</th>
-            <td>{{$data->jobs->name}}</td>
+            <td>{{$data->id_jobs}}</td>
             <td>{{$data->name}}</td>
             <td>{{$data->email}}</td>
             <td>{{$data->phone}}</td>
@@ -28,11 +28,6 @@
                 <div class="btn-group">
                     <a href="/employees/edit/{{$data->id_employees}}" class="btn btn-success">Edit</a>
                     <a href="/employees/delete/{{$data->id_employees}}" class="btn btn-danger">Hapus</a>
-<!--                     <form action="{{ route('', $data->id_employees)}}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger" type="submit">Hapus</button>
-                    </form> -->
                 </div>
             </td>
         </tr>

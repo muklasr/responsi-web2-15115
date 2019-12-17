@@ -53,7 +53,7 @@ class EmployeesController extends Controller
             'address' => $request->input('alamat')
         ]);
         $employees->save();
-        return redirect('employe');
+        return redirect('employees');
     }
 
     /**
@@ -87,7 +87,7 @@ class EmployeesController extends Controller
      * @param  \App\Employees  $employees
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $request->validate([
             'job'=>'required',
@@ -103,8 +103,8 @@ class EmployeesController extends Controller
             'phone' => $request->input('kontak'),
             'address' => $request->input('alamat')
         ];
-        Employees::where('id_employees',$id)->update($data);
-        return redirect('employ');
+        Employees::where('id_employees',$request->id)->update($data);
+        return redirect('employees');
     }
 
     /**
@@ -116,6 +116,6 @@ class EmployeesController extends Controller
     public function destroy($id)
     {
         Employees::where('id_employees',$id)->delete();
-        return redirect('employe');
+        return redirect('employees');
     }
 }

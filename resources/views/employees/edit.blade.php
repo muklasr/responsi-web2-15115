@@ -4,6 +4,7 @@
 <form action="{{route('employeesUpdate')}}" method="POST">
   @csrf
   <div class="form-group">
+  <input type="hidden" name="id" value="{{ $employees->id_employees }}"/>
     <label>Jobs</label>
     <select name="job" class="form-control">
       @foreach($jobs as $data)
@@ -21,7 +22,7 @@
   </div>
   <div class="form-group">
     <label>Kontak</label>
-    <input type="text" name="kontak" class="form-control" placeholder="..." value="{{$employees->phones}}">
+    <input type="text" name="kontak" class="form-control" placeholder="..." value="{{$employees->phone}}">
   </div>
   <div class="form-group">
     <label>Alamat</label>
