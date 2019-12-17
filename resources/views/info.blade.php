@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Info</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,13 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <!-- Isikan dengan username akun github anda -->
-                    muklasr
+                    Muklas Rahmanto
                 </div>
 
                 <div class="links">
-                    <!-- ganti url dengan link github anda -->
-                    <a href="https://github.com/muklasr">GitHub</a>
+                    18/425973/SV/15115
                 </div>
             </div>
         </div>
